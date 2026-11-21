@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Model weights (auto-downloaded by ultralytics on first run)
+*.pt
+
+# Secrets / local config -- never commit these
+.env
+*.env
+secrets.*
+*.pem
+*.key
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

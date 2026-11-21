@@ -1,0 +1,24 @@
+# --- Required for both modes ---
+opencv-python
+
+# --- Required only for Idle Mode (YOLOv8 object detection + ByteTrack tracking) ---
+ultralytics
+lapx
+
+# --- Required only for servo control (PCA9685 pan-tilt mount) ---
+# On the Raspberry Pi, install these AFTER enabling I2C (sudo raspi-config
+# -> Interface Options -> I2C -> Enable), then reboot.
+adafruit-circuitpython-servokit
+adafruit-blinka
+
+# --- Required only for tools/servo_calibration.py (keyboard jogging over SSH) ---
+sshkeyboard
+
+# --- Required only for the Raspberry Pi CSI camera (Camera Module Rev 1.3 / v2) ---
+# On Raspberry Pi OS (Bullseye/Bookworm), Picamera2 is best installed via apt,
+# NOT pip, so it picks up the system libcamera bindings:
+#     sudo apt install -y python3-picamera2
+# If you're using a venv, create it with --system-site-packages so it can see
+# the apt-installed picamera2 package. Leave this line commented out if you
+# installed it via apt.
+# picamera2
